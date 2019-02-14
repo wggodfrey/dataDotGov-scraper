@@ -15,6 +15,7 @@ module.exports = {
       actions: path.resolve(__dirname, 'client/actions/'),
       reducers: path.resolve(__dirname, 'client/reducers/'),
       store: path.resolve(__dirname, 'client/store/'),
+      utils: path.resolve(__dirname, 'client/utils'),
     },
   },
   module: {

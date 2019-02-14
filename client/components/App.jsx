@@ -2,6 +2,11 @@ import React from 'react';
 import store from 'store';
 import styled, { createGlobalStyle } from 'styled-components';
 
+import { getSettings } from 'actions/settings';
+
+import Controller from 'containers/Controller';
+import Results from 'containers/Results';
+
 const Wrapper = styled.div`
   width: calc(100% - 20px);
   margin: 10px;
@@ -39,10 +44,16 @@ const GlobalStyle = createGlobalStyle`
 
 class App extends React.Component {
 
+  componentDidMount() {
+    store.dispatch(getSettings());
+  }
+
   render() {
     return (
       <Wrapper>
         <GlobalStyle />
+        <Controller />
+        <Results />
       </Wrapper>
     );
   }
