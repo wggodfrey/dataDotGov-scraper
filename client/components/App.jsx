@@ -3,6 +3,7 @@ import store from 'store';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import { getSettings } from 'actions/settings';
+import { getResults } from 'actions/results';
 
 import Controller from 'containers/Controller';
 import Results from 'containers/Results';
@@ -21,6 +22,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     height: 100%;
     background: #efefef;
+    font-family: Roboto;
+    font-weight: 400;
   }
 
   button {
@@ -46,6 +49,7 @@ class App extends React.Component {
 
   componentDidMount() {
     store.dispatch(getSettings());
+    store.dispatch(getResults('test'));
   }
 
   render() {
