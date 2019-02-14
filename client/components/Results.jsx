@@ -4,18 +4,25 @@ import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   margin: 20px 0;
+  font-size: 13px;
 `;
 
+const Item = styled.div`
+  margin: 3px 4px;
+`
+
 const Results = ({ results }) => (
-  <div>
+  <Wrapper>
     {
       results
       ? results.map(dataset => 
-          <div>{dataset.title}</div>
+          <Item key={`d${dataset.id}`}>
+            {dataset.title}
+          </Item>
         )
       : <div>no results</div>
     }
-  </div>
+  </Wrapper>
 );
 
 export default Results;

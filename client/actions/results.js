@@ -6,7 +6,7 @@ const initResults = results => ({
   payload: results,
 });
 
-const getResults = (searchString) => dispatch => {
+const getResults = (searchString = '') => dispatch => {
   const url = `https://catalog.data.gov/dataset?q=${searchString}`;
   axios.get(url)
     .then(({ data }) => {
@@ -14,6 +14,7 @@ const getResults = (searchString) => dispatch => {
        let results = [];
        $('.dataset-content').each((i, elem) => {
          results.push({
+           id: i,
            title: $(elem).find('.dataset-heading a')[0].children[0].data,
          });
        });

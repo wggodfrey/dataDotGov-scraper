@@ -11,7 +11,7 @@ const setSearchString = string => ({
 
 const getSettings = () => dispatch => {
   const settings = {
-    searchString: 'test',
+    searchString: '',
     limitCount: null,
     orderBy: null,
     filterLocation: null,

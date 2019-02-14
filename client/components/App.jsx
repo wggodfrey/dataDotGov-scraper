@@ -49,7 +49,7 @@ class App extends React.Component {
 
   componentDidMount() {
     store.dispatch(getSettings());
-    store.dispatch(getResults('test'));
+    store.dispatch(getResults());
   }
 
   render() {
