@@ -16,6 +16,7 @@ const getResults = (searchString = '') => dispatch => {
          results.push({
            id: i,
            title: $(elem).find('.dataset-heading a')[0].children[0].data,
+           description: $(elem).find('.notes div')[0].children[0].data,
          });
        });
        dispatch(initResults(results));
