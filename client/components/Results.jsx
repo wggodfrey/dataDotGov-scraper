@@ -17,7 +17,6 @@ const Th = styled.thead`
   text-align: left;
   & td {
     padding: 3px;
-    max-width: 400px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -35,7 +34,6 @@ const Tbody = styled.tbody`
   overflow-y: auto;
   & td {
     padding: 3px;
-    max-width: 400px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -51,10 +49,10 @@ const Tbody = styled.tbody`
 const Results = ({ results }) => {
 
   const columns = [
-    {label:'id', style:{width: '50px'}},
-    {label:'title', style:{width: 'calc(40% - 50px)'}}, 
-    {label:'description', style:{width: 'calc(60% - 50px)'}},
-    {label:'format', style:{width: '50px'}}];
+    {label:'id', style:{maxWidth: '50px'}},
+    {label:'title', style:{maxWidth: 'calc(30vw - 65px)'}}, 
+    {label:'description', style:{maxWidth: 'calc(70vw - 115px)'}},
+    {label:'format', style:{maxWidth: '100px'}}];
 
   return (
     <Table>
